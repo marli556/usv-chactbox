@@ -19,6 +19,11 @@ jobs:
 
       - name: Download Fern
         run: npm install -g fern-api
+        
+      - name: Upgrade Fern
+        env:
+          FERN_TOKEN: ${{ secrets.FERN_TOKEN }}
+        run: fern upgrade
 
       - name: Generate and Publish Docs
         env:
