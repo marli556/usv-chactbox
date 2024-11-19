@@ -29,8 +29,8 @@ from private_gpt.ui.images import logo_svg
 logger = logging.getLogger(__name__)
 
 THIS_DIRECTORY_RELATIVE = Path(__file__).parent.relative_to(PROJECT_ROOT_PATH)
-# Should be "private_gpt/ui/avatar-bot.ico"
-AVATAR_BOT = THIS_DIRECTORY_RELATIVE / "avatar-bot.ico"
+# Should be "private_gpt/ui/flame.png"
+AVATAR_BOT = THIS_DIRECTORY_RELATIVE / "flame.png"
 
 UI_TAB_TITLE = "USV GPT"
 
@@ -387,7 +387,7 @@ class PrivateGptUi:
             ".footer { text-align: center; margin-top: 20px; font-size: 14px; display: flex; align-items: center; justify-content: center; color: #FFFFFF; }"
             ".footer-zylon-link { display:flex; margin-left: 5px; text-decoration: auto; color: var(--body-text-color); }"
             ".footer-zylon-link:hover { color: #f9a01b; }"
-            ".footer-zylon-ico { height: 20px; margin-left: 5px; background-color: #f9a01b; border-radius: 2px; }",
+            ".footer-zylon-ico { height: 20px; margin-left: 5px; border-radius: 2px; }",
         ) as blocks:
             with gr.Row():
                 gr.HTML(f"<div class='logo'/><img src={logo_svg} alt=PrivateGPT></div")
