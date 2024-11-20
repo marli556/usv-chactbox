@@ -32,6 +32,8 @@ jobs:
       - uses: ./.github/workflows/actions/install_dependencies
       - name: run ${{ matrix.quality-command }}
         run: make ${{ matrix.quality-command }}
+      - name: fix Ruff
+        run: --fix
 
   test:
     needs: setup
