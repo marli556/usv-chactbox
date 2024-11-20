@@ -33,7 +33,7 @@ jobs:
       - name: run ${{ matrix.quality-command }}
         run: make ${{ matrix.quality-command }}
       - name: fix Ruff
-        run: --fix
+        run: `--fix`
 
   test:
     needs: setup
